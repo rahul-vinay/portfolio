@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Latest News - Rahul Vinay</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── News-specific styles ── */
+
+			/* Tag badges */
+			.news-tag {
+				display: inline-block;
+				font-size: 0.6em;
+				font-weight: 700;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				padding: 0.25em 0.75em;
+				border-radius: 2em;
+				margin-right: 0.5em;
+				vertical-align: middle;
+				background: rgba(255,255,255,0.08);
+				color: #fff;
+				border: 1px solid rgba(255,255,255,0.15);
+			}
+			.news-tag.announcement { background: rgba(240,80,80,0.18); border-color: rgba(240,80,80,0.4); color: #f87171; }
+			.news-tag.blog         { background: rgba(80,160,240,0.18); border-color: rgba(80,160,240,0.4); color: #60b4f7; }
+			.news-tag.update       { background: rgba(80,200,140,0.18); border-color: rgba(80,200,140,0.4); color: #4ecca3; }
+			.news-tag.project      { background: rgba(200,140,80,0.18); border-color: rgba(200,140,80,0.4); color: #f0b06a; }
+
+			/* Date meta */
+			.news-date {
+				font-size: 0.75em;
+				letter-spacing: 0.1em;
+				opacity: 0.55;
+				text-transform: uppercase;
+				margin-bottom: 0.5em;
+				display: block;
+			}
+
+			/* Card image */
+			.news-image {
+				width: 100%;
+				max-height: 260px;
+				object-fit: cover;
+				border-radius: 4px;
+				margin-bottom: 1.2em;
+				opacity: 0.88;
+				transition: opacity 0.3s ease;
+			}
+			.news-image:hover { opacity: 1; }
+
+			/* Quick announcement strip */
+			.announcement-strip {
+				display: flex;
+				align-items: flex-start;
+				gap: 1em;
+				padding: 1em 1.4em;
+				background: rgba(255,255,255,0.04);
+				border-left: 3px solid #f87171;
+				border-radius: 0 4px 4px 0;
+				margin-bottom: 1.2em;
+			}
+			.announcement-strip .strip-icon {
+				font-size: 1.3em;
+				flex-shrink: 0;
+				margin-top: 0.1em;
+			}
+			.announcement-strip p {
+				margin: 0;
+				font-size: 0.95em;
+				line-height: 1.6;
+			}
+			.announcement-strip .strip-date {
+				font-size: 0.7em;
+				opacity: 0.45;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				display: block;
+				margin-top: 0.3em;
+			}
+
+			/* Read more link style */
+			.read-more {
+				font-size: 0.8em;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				font-weight: 700;
+				opacity: 0.7;
+				transition: opacity 0.2s;
+			}
+			.read-more:hover { opacity: 1; }
+
+			/* Section divider label */
+			.section-label {
+				font-size: 0.65em;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				opacity: 0.4;
+				margin-bottom: 2em;
+				padding-bottom: 0.75em;
+				border-bottom: 1px solid rgba(255,255,255,0.08);
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Rahul Vinay</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Projects</a></li>
+					<li><a href="generic.html">Experience</a></li>
+					<li class="active"><a href="news.html">News</a></li>
+					<li><a href="achievements.html">Achievements</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/rahul-vinay" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Page Header -->
+				<section class="post">
+					<header class="major">
+						<h1>Latest News<br />&amp; Updates</h1>
+						<p>What's happening in my world — projects, milestones, and thoughts.</p>
+					</header>
+				</section>
+
+				<!-- ══════════════════════════════════════
+				     QUICK ANNOUNCEMENTS
+				     ══════════════════════════════════════
+				     HOW TO EDIT: Copy one .announcement-strip block,
+				     paste it below, and update the text, date, and emoji.
+				     ══════════════════════════════════════ -->
+				<section class="post">
+					<p class="section-label">📣 Quick Announcements</p>
+
+					<!-- Announcement 1 -->
+					<div class="announcement-strip">
+						<span class="strip-icon">💼</span>
+						<div>
+							<p>Joined Speridian Technologies as a Data Analyst in Application Development, leading enterprise-scale data migration projects in Albuquerque, NM.</p>
+							<span class="strip-date">May 2025</span>
+						</div>
+					</div>
+
+					<!-- Announcement 2 -->
+					<div class="announcement-strip">
+						<span class="strip-icon">🎓</span>
+						<div>
+							<p>Graduated with an M.S. in Computer Science from Missouri University of Science and Technology with a 3.72 GPA.</p>
+							<span class="strip-date">December 2024</span>
+						</div>
+					</div>
+
+					<!-- Announcement 3 — ADD MORE BELOW THIS LINE following the same pattern -->
+					<div class="announcement-strip">
+						<span class="strip-icon">🌐</span>
+						<div>
+							<p>Portfolio updated with new project showcases, an achievements section, and this news feed. Check out what I've been building!</p>
+							<span class="strip-date">March 2025</span>
+						</div>
+					</div>
+
+				</section>
+
+				<!-- ══════════════════════════════════════
+				     BLOG-STYLE POSTS
+				     ══════════════════════════════════════
+				     HOW TO EDIT: Each <article> is one post.
+				     Copy a block, paste below, update title/date/tag/body.
+				     ══════════════════════════════════════ -->
+				<section class="posts">
+
+					<!-- Blog Post 1 -->
+					<article>
+						<header>
+							<span class="news-date">May 2025</span>
+							<span class="news-tag announcement">Announcement</span>
+							<h2>New Role: Data Analyst at Speridian Technologies</h2>
+						</header>
+						<p>
+							Excited to be working at Speridian Technologies in Albuquerque, NM, leading enterprise-scale 
+							data migration projects. My work involves Azure Data Factory pipelines, SQL Server, ETL workflows, 
+							and Salesforce data migrations — bringing my ML and data background into a production engineering context.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="button" target="_blank">Connect on LinkedIn</a></li>
+						</ul>
+					</article>
+
+					<!-- Blog Post 2 -->
+					<article>
+						<header>
+							<span class="news-date">May 2024 – May 2025</span>
+							<span class="news-tag update">Update</span>
+							<h2>Co-op at DuPont (Spectrum Plastics Group): ML Meets Manufacturing</h2>
+						</header>
+						<p>
+							Spent a year at DuPont's Spectrum Plastics Group as a Software Engineer Co-op in Hermann, MO. 
+							Built predictive models in Python and C# to improve laser drilling precision, designed 
+							real-time dashboards tracking KPIs with Matplotlib and ScottPlot, and optimized SQL 
+							data pipelines for quality monitoring — a crash course in applying ML to industrial processes.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="button" target="_blank">View on LinkedIn</a></li>
+						</ul>
+					</article>
+
+					<!-- Card Post with Image -->
+					<article>
+						<header>
+							<span class="news-date">December 2024</span>
+							<span class="news-tag project">Project</span>
+							<h2>Image Captioning with Adaptive Attention — M.S. Capstone</h2>
+						</header>
+						<img src="images/sat.jpg" alt="Adaptive Attention Image Captioning" class="news-image" />
+						<p>
+							Built a deep learning image captioning model using ResNet50 for feature extraction and a 
+							sentinel gate-enhanced LSTM decoder. Trained on 8,000+ image-caption pairs — the model 
+							dynamically decides when to focus on visual regions vs. language context, pushing beyond 
+							the original Show-Attend-Tell paper.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/rahul-vinay/ShowAttendTell" class="button" target="_blank">View Project</a></li>
+						</ul>
+					</article>
+
+					<!-- Card Post with Image -->
+					<article>
+						<header>
+							<span class="news-date">October 2023</span>
+							<span class="news-tag project">Project</span>
+							<h2>Warmly V2 — AI-Powered Conversational Weather Chatbot</h2>
+						</header>
+						<img src="images/flask.jpg" alt="Warmly V2 Weather Chatbot" class="news-image" />
+						<p>
+							Built an AI-driven weather chatbot using Streamlit, OpenAI API, and LangChain. 
+							Integrated LLMs for context-aware conversations and reduced response latency by 30% 
+							through asynchronous API calls and NLP pipeline optimizations.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://github.com/rahul-vinay/warmlyv2" class="button" target="_blank">View Project</a></li>
+						</ul>
+					</article>
+
+					<!-- Blog Post 3 -->
+					<article>
+						<header>
+							<span class="news-date">February – May 2022</span>
+							<span class="news-tag blog">Blog</span>
+							<h2>NLP Research at DRDO — Snowball Relation Extraction</h2>
+						</header>
+						<p>
+							Interned at DRDO's Center for Artificial Intelligence and Robotics in Bangalore, implementing 
+							the Snowball Relation Extraction model in Python. Achieved 87% accuracy on large unstructured 
+							text datasets, with a peak F1 of 75% after hyperparameter tuning across 10,000+ records — 
+							my first real exposure to production-scale NLP.
+						</p>
+						<ul class="actions special">
+							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="button" target="_blank">View on LinkedIn</a></li>
+						</ul>
+					</article>
+
+					<!-- ── ADD NEW POSTS ABOVE THIS COMMENT ──
+					     TEMPLATE FOR A NEW POST (no image):
+					<article>
+						<header>
+							<span class="news-date">Month YYYY</span>
+							<span class="news-tag update">Update</span>
+							<h2>Your Post Title Here</h2>
+						</header>
+						<p>Your post content goes here. Write 2-4 sentences describing the update, insight, or news.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button">Read More</a></li>
+						</ul>
+					</article>
+
+					     TEMPLATE FOR A POST WITH IMAGE:
+					<article>
+						<header>
+							<span class="news-date">Month YYYY</span>
+							<span class="news-tag project">Project</span>
+							<h2>Your Post Title Here</h2>
+						</header>
+						<img src="images/your-image.jpg" alt="Description" class="news-image" />
+						<p>Your post content goes here.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button">View Project</a></li>
+						</ul>
+					</article>
+					──────────────────────────────────── -->
+
+				</section>
+
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Location</h3>
+						<p>Albuquerque, New Mexico</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="#">(573) 466-6570</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="#">rvinay102000@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/rahul-vinay" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; Rahul Vinay</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
