@@ -43,6 +43,28 @@
 				border-color: rgba(255,255,255,0.28);
 				box-shadow: 0 0 28px rgba(255,255,255,0.06);
 			}
+			/* Cert image zoom on hover — same as Projects section */
+.cert-image-wrap {
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1.1em;
+    display: block;
+}
+.cert-image-wrap img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    padding: 1em;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.4s ease, border-color 0.3s ease;
+}
+.cert-image-wrap img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255,255,255,0.28);
+}
 
 			/* ── Cert card meta ── */
 			.cert-issuer {
@@ -207,8 +229,8 @@
 					<article>
 						<!-- Image clicks open full-size in a new tab.
 						     To swap: change BOTH href and src to your new filename. -->
-						<a href="images/fabric data engineer badge.jpg" target="_blank" title="Click to view full size">
-							<img src="images/fabric data engineer badge.jpg" alt="Microsoft Fabric Data Engineer Associate Certificate" class="cert-image" />
+						<a href="images/fabric data engineer badge.jpg" target="_blank" title="Click to view full size" class="cert-image-wrap">
+   					    <img src="images/fabric data engineer badge.jpg" alt="Microsoft Fabric Data Engineer Associate Certificate" />
 						</a>
 						<header>
 							<span class="cert-issuer">Microsoft</span>
