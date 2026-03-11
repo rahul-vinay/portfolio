@@ -19,34 +19,32 @@
 				letter-spacing: 0.25em;
 				text-transform: uppercase;
 				opacity: 0.4;
-				margin-bottom: 2em;
+				margin-bottom: 1.5em;
 				padding-bottom: 0.75em;
 				border-bottom: 1px solid rgba(255,255,255,0.08);
 			}
 
-			/* ══════════════════════════════
-			   CERTIFICATIONS (image + title + description)
-			   ══════════════════════════════ */
-
-			/* Cert image */
+			/* ── Cert image — click opens full size ── */
 			.cert-image {
 				width: 100%;
-				max-height: 220px;
+				max-height: 340px;
 				object-fit: contain;
 				object-position: center;
 				background: rgba(255,255,255,0.04);
-				border: 1px solid rgba(255,255,255,0.08);
+				border: 1px solid rgba(255,255,255,0.10);
 				border-radius: 6px;
 				padding: 1em;
 				margin-bottom: 1.1em;
+				cursor: zoom-in;
+				display: block;
 				transition: border-color 0.3s ease, box-shadow 0.3s ease;
 			}
 			.cert-image:hover {
-				border-color: rgba(255,255,255,0.2);
-				box-shadow: 0 0 24px rgba(255,255,255,0.04);
+				border-color: rgba(255,255,255,0.28);
+				box-shadow: 0 0 28px rgba(255,255,255,0.06);
 			}
 
-			/* Cert issuer tag */
+			/* ── Cert card meta ── */
 			.cert-issuer {
 				display: inline-block;
 				font-size: 0.62em;
@@ -56,8 +54,6 @@
 				opacity: 0.5;
 				margin-bottom: 0.35em;
 			}
-
-			/* Cert year badge */
 			.cert-year {
 				float: right;
 				font-size: 0.62em;
@@ -67,39 +63,26 @@
 				margin-top: 0.1em;
 			}
 
-			/* ══════════════════════════════
-			   AWARDS & HONORS (text only)
-			   ══════════════════════════════ */
-
+			/* ── Awards list ── */
 			.awards-list {
 				list-style: none;
 				padding: 0;
 				margin: 0;
 			}
-
 			.awards-list li {
 				display: flex;
 				gap: 1.25em;
 				align-items: flex-start;
 				padding: 1.4em 0;
 				border-bottom: 1px solid rgba(255,255,255,0.07);
-				transition: background 0.2s;
 			}
-			.awards-list li:last-child {
-				border-bottom: none;
-			}
-
+			.awards-list li:last-child { border-bottom: none; }
 			.award-icon {
 				font-size: 1.6em;
 				flex-shrink: 0;
 				margin-top: 0.1em;
-				filter: grayscale(20%);
 			}
-
-			.award-body {
-				flex: 1;
-			}
-
+			.award-body { flex: 1; }
 			.award-meta {
 				display: flex;
 				align-items: center;
@@ -107,7 +90,6 @@
 				margin-bottom: 0.3em;
 				flex-wrap: wrap;
 			}
-
 			.award-title {
 				font-size: 1em;
 				font-weight: 700;
@@ -115,15 +97,14 @@
 				margin: 0;
 				letter-spacing: 0.02em;
 			}
-
 			.award-org {
 				font-size: 0.68em;
 				letter-spacing: 0.12em;
 				text-transform: uppercase;
 				opacity: 0.45;
 				font-weight: 600;
+				margin: 0.1em 0 0.4em;
 			}
-
 			.award-year-tag {
 				font-size: 0.6em;
 				letter-spacing: 0.1em;
@@ -133,16 +114,14 @@
 				background: rgba(255,255,255,0.07);
 				border: 1px solid rgba(255,255,255,0.12);
 				opacity: 0.7;
+				white-space: nowrap;
 			}
-
 			.award-desc {
 				font-size: 0.88em;
 				opacity: 0.65;
 				line-height: 1.65;
 				margin: 0;
 			}
-
-			/* Link on award */
 			.award-link {
 				font-size: 0.72em;
 				letter-spacing: 0.1em;
@@ -150,17 +129,18 @@
 				font-weight: 700;
 				opacity: 0.55;
 				display: inline-block;
-				margin-top: 0.5em;
+				margin-top: 0.6em;
 				transition: opacity 0.2s;
 			}
 			.award-link:hover { opacity: 1; }
 
-			/* Color accents per category */
+			/* Icon color options */
 			.award-icon.gold   { color: #f5c842; }
 			.award-icon.silver { color: #b0bec5; }
 			.award-icon.blue   { color: #60b4f7; }
 			.award-icon.green  { color: #4ecca3; }
 			.award-icon.red    { color: #f87171; }
+			.award-icon.orange { color: #f0b06a; }
 
 		</style>
 	</head>
@@ -192,54 +172,66 @@
 			<div id="main">
 
 				<!-- Page Header -->
-				<section class="post" style="padding-bottom: 0;">
-    <header class="major">
-        <h1>Achievements</h1>
-        <p>Certifications earned, honors received, and milestones along the way.</p>
-    </header>
-</section>
+				<section class="post">
+					<header class="major">
+						<h1>Achievements</h1>
+						<p>Certifications earned, honors received, and milestones along the way.</p>
+					</header>
+				</section>
 
-				<!-- ══════════════════════════════════════
-				     CERTIFICATIONS SECTION
-				     ══════════════════════════════════════
-				     HOW TO EDIT: Each <article> is one certification card.
-				     1. Replace cert-image src with your badge/certificate image
-				        (upload to the /images folder in your repo, then link as images/your-file.jpg)
-				     2. Update the title, issuer, year, and description text.
-				     3. Optionally add a verification link in the <a> tag.
-				     ══════════════════════════════════════ -->
-			<section class="posts" style="padding-top: 0;">
-	    <div style="grid-column: 1 / -1; padding: 0 0 1em 0;">
-	        <p class="section-label">🏅 Certifications</p>
-	    </div>
+
+				<!-- ╔═══════════════════════════════════════════════════════╗
+				     ║                   CERTIFICATIONS                     ║
+				     ╠═══════════════════════════════════════════════════════╣
+				     ║  HOW TO ADD A NEW CERT CARD:                         ║
+				     ║  1. Copy an <article> block below                    ║
+				     ║  2. Paste it before the "ADD NEW CERTS HERE" line    ║
+				     ║  3. Update the issuer, year, title, and description  ║
+				     ║                                                       ║
+				     ║  TO ADD AN IMAGE TO A CARD:                          ║
+				     ║  - Upload badge to /images (no spaces in filename)   ║
+				     ║  - Uncomment the <a>/<img> block inside the article  ║
+				     ║  - Update both href and src to your filename         ║
+				     ║                                                       ║
+				     ║  The grid fills left-to-right automatically.         ║
+				     ║  Works with any number of cards.                     ║
+				     ╚═══════════════════════════════════════════════════════╝ -->
+
+				<section class="post">
+					<p class="section-label">🏅 Certifications</p>
+				</section>
 
 				<section class="posts">
 
-					<!-- Certification Card 1 -->
+					<!-- ── CERT 1: Microsoft Fabric ── HAS IMAGE ── -->
 					<article>
-						<!-- Upload your Microsoft Fabric badge to /images and update src -->
-						<img src="images/fabric data engineer badge.jpg" alt="Microsoft Fabric Data Engineer Associate Badge" class="cert-image" />
-						<!-- ↑ REPLACE with: src="images/microsoft-fabric-badge.png" ↑ -->
+						<!-- Image clicks open full-size in a new tab.
+						     To swap: change BOTH href and src to your new filename. -->
+						<a href="images/fabric-data-engineer-badge.jpg" target="_blank" title="Click to view full size">
+							<img src="images/fabric-data-engineer-badge.jpg" alt="Microsoft Fabric Data Engineer Associate Certificate" class="cert-image" />
+						</a>
 						<header>
 							<span class="cert-issuer">Microsoft</span>
 							<span class="cert-year">November 2025</span>
 							<h2>Microsoft Fabric Data Engineer Associate</h2>
 						</header>
 						<p>
-							Demonstrated expertise in designing, implementing, and managing data engineering solutions 
-							using Microsoft Fabric, including data pipelines, lakehouses, and analytics workflows 
-							at enterprise scale.
+							Demonstrated expertise in designing, implementing, and managing data engineering 
+							solutions using Microsoft Fabric, including data pipelines, lakehouses, and 
+							analytics workflows at enterprise scale.
 						</p>
 						<ul class="actions special">
 							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="button small" target="_blank">Verify on LinkedIn</a></li>
 						</ul>
 					</article>
 
-					<!-- Certification Card 2 -->
+					<!-- ── CERT 2: AWS ── NO IMAGE YET ── -->
 					<article>
-						<!-- Upload your AWS badge to /images and update src -->
-						<img src="images/drowsy.jpg" alt="AWS Cloud Practitioner Badge" class="cert-image" />
-						<!-- ↑ REPLACE with: src="images/aws-cloud-practitioner-badge.png" ↑ -->
+						<!-- TO ADD IMAGE: upload badge, then uncomment and update the block below
+						<a href="images/aws-cloud-practitioner-badge.png" target="_blank" title="Click to view full size">
+							<img src="images/aws-cloud-practitioner-badge.png" alt="AWS Cloud Practitioner Badge" class="cert-image" />
+						</a>
+						-->
 						<header>
 							<span class="cert-issuer">Amazon Web Services</span>
 							<span class="cert-year">January 2025</span>
@@ -255,80 +247,101 @@
 						</ul>
 					</article>
 
-					<!-- Certification Card 3 -->
+					<!-- ── CERT 3: NVIDIA DLI ── NO IMAGE YET ── -->
 					<article>
-						<!-- Upload your NVIDIA DLI badge to /images and update src -->
-						<img src="images/sentimentlens.jpg" alt="NVIDIA Deep Learning Badge" class="cert-image" />
-						<!-- ↑ REPLACE with: src="images/nvidia-dli-badge.png" ↑ -->
+						<!-- TO ADD IMAGE: upload badge, then uncomment and update the block below
+						<a href="images/nvidia-dli-deep-learning-badge.png" target="_blank" title="Click to view full size">
+							<img src="images/nvidia-dli-deep-learning-badge.png" alt="NVIDIA DLI Deep Learning Badge" class="cert-image" />
+						</a>
+						-->
 						<header>
 							<span class="cert-issuer">NVIDIA Deep Learning Institute</span>
 							<span class="cert-year">October 2023</span>
 							<h2>Fundamentals of Deep Learning</h2>
 						</header>
 						<p>
-							Completed hands-on training in deep learning fundamentals including CNNs, data augmentation, 
-							transfer learning, and deployment. Trained models using NVIDIA GPUs in a lab environment 
-							designed for applied AI practitioners.
+							Completed hands-on training in deep learning fundamentals including CNNs, 
+							data augmentation, transfer learning, and deployment. Trained models using 
+							NVIDIA GPUs in a lab environment designed for applied AI practitioners.
 						</p>
 						<ul class="actions special">
 							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="button small" target="_blank">Verify on LinkedIn</a></li>
 						</ul>
 					</article>
 
-					<!-- Certification Card 4 -->
+					<!-- ── CERT 4: Google Data Analytics ── NO IMAGE YET ── -->
 					<article>
-						<!-- Upload your Google badge to /images and update src -->
-						<img src="images/devsalaryinsights.jpg" alt="Google Data Analytics Badge" class="cert-image" />
-						<!-- ↑ REPLACE with: src="images/google-data-analytics-badge.png" ↑ -->
+						<!-- TO ADD IMAGE: upload badge, then uncomment and update the block below
+						<a href="images/google-data-analytics-badge.png" target="_blank" title="Click to view full size">
+							<img src="images/google-data-analytics-badge.png" alt="Google Data Analytics Badge" class="cert-image" />
+						</a>
+						-->
 						<header>
 							<span class="cert-issuer">Google / Coursera</span>
 							<span class="cert-year">July 2023</span>
 							<h2>Google Data Analytics Professional Certificate</h2>
 						</header>
 						<p>
-							8-course professional certificate covering the full data analysis workflow: ask, prepare, 
-							process, analyze, share, and act. Includes hands-on work with spreadsheets, SQL, 
-							Tableau, and R for data-driven decision making.
+							8-course professional certificate covering the full data analysis workflow: 
+							ask, prepare, process, analyze, share, and act. Hands-on work with 
+							spreadsheets, SQL, Tableau, and R for data-driven decision making.
 						</p>
 						<ul class="actions special">
 							<li><a href="https://www.linkedin.com/in/rahul-vinay/" class="button small" target="_blank">Verify on LinkedIn</a></li>
 						</ul>
 					</article>
 
-					<!-- ── ADD A NEW CERT CARD — copy this block and fill in your details ──
+					<!-- ════════════════════════════════════════════════
+					     ADD NEW CERTS HERE — paste a copy of this block:
+
 					<article>
-						<img src="images/your-badge.png" alt="Your Cert Name" class="cert-image" />
+						<a href="images/your-badge-filename.jpg" target="_blank" title="Click to view full size">
+							<img src="images/your-badge-filename.jpg" alt="Your Cert Name" class="cert-image" />
+						</a>
 						<header>
 							<span class="cert-issuer">Issuing Organization</span>
-							<span class="cert-year">YYYY</span>
+							<span class="cert-year">Month YYYY</span>
 							<h2>Certificate Title</h2>
 						</header>
 						<p>
-							Short description of what the certification covers and what you demonstrated.
+							2-3 sentences describing what the cert covers and what you demonstrated.
 						</p>
 						<ul class="actions special">
-							<li><a href="YOUR_VERIFY_LINK" class="button small" target="_blank">Verify Certificate</a></li>
+							<li><a href="YOUR_VERIFY_URL" class="button small" target="_blank">Verify Certificate</a></li>
 						</ul>
 					</article>
-					────────────────────────────────────────── -->
+
+					     ════════════════════════════════════════════════ -->
 
 				</section>
 
-				<!-- ══════════════════════════════════════
-				     AWARDS & HONORS SECTION (text only)
-				     ══════════════════════════════════════
-				     HOW TO EDIT: Each <li> is one award entry.
-				     1. Pick an emoji icon (🏆 🥇 🎖️ 🌟 🏅 📜 🎗️ etc.)
-				     2. Set the icon color class: gold | silver | blue | green | red
-				     3. Update title, org, year, and description.
-				     4. Optionally add an award-link anchor tag.
-				     ══════════════════════════════════════ -->
+
+				<!-- ╔═══════════════════════════════════════════════════════╗
+				     ║                  AWARDS & HONORS                     ║
+				     ╠═══════════════════════════════════════════════════════╣
+				     ║  HOW TO ADD A NEW AWARD:                             ║
+				     ║  1. Copy an <li> block below                         ║
+				     ║  2. Paste it before the "ADD NEW AWARDS HERE" line   ║
+				     ║  3. Update icon, color, title, org, year, and desc   ║
+				     ║                                                       ║
+				     ║  ICON COLOR OPTIONS:                                  ║
+				     ║  class="award-icon gold"   → yellow/gold             ║
+				     ║  class="award-icon silver" → grey/silver             ║
+				     ║  class="award-icon blue"   → blue                   ║
+				     ║  class="award-icon green"  → teal/green             ║
+				     ║  class="award-icon red"    → red                    ║
+				     ║  class="award-icon orange" → orange                 ║
+				     ║                                                       ║
+				     ║  The <a class="award-link"> line is optional.        ║
+				     ║  Remove it if there is no link to share.             ║
+				     ╚═══════════════════════════════════════════════════════╝ -->
+
 				<section class="post">
 					<p class="section-label">🏆 Awards &amp; Honors</p>
 
 					<ul class="awards-list">
 
-						<!-- Award 1 -->
+						<!-- ── AWARD 1 ── -->
 						<li>
 							<span class="award-icon gold">🏆</span>
 							<div class="award-body">
@@ -338,14 +351,14 @@
 								</div>
 								<p class="award-org">Missouri University of Science and Technology</p>
 								<p class="award-desc">
-									Recognized for maintaining a 3.72 GPA throughout the M.S. in Computer Science program, 
-									with coursework spanning ML for Computer Vision, Deep Learning, Advanced AI, and 
-									Analysis of Algorithms.
+									Recognized for maintaining a 3.72 GPA throughout the M.S. in Computer Science 
+									program, with coursework spanning ML for Computer Vision, Deep Learning, 
+									Advanced AI, and Analysis of Algorithms.
 								</p>
 							</div>
 						</li>
 
-						<!-- Award 2 -->
+						<!-- ── AWARD 2 ── -->
 						<li>
 							<span class="award-icon blue">🎖️</span>
 							<div class="award-body">
@@ -353,16 +366,16 @@
 									<p class="award-title">Logistics Board Member — ACM PickHacks Hackathon</p>
 									<span class="award-year-tag">2023 – 2024</span>
 								</div>
-								<p class="award-org">Missouri S&T ACM Chapter</p>
+								<p class="award-org">Missouri S&amp;T ACM Chapter</p>
 								<p class="award-desc">
-									Selected to serve on the logistics board for PickHacks, Missouri S&T's annual ACM 
-									hackathon. Helped organize and run the event, coordinating teams and judging tracks 
-									alongside the broader ACM leadership.
+									Selected to serve on the logistics board for PickHacks, Missouri S&amp;T's 
+									annual ACM hackathon. Coordinated teams, judging tracks, and event 
+									operations alongside the broader ACM leadership.
 								</p>
 							</div>
 						</li>
 
-						<!-- Award 3 -->
+						<!-- ── AWARD 3 ── -->
 						<li>
 							<span class="award-icon green">🌟</span>
 							<div class="award-body">
@@ -372,14 +385,14 @@
 								</div>
 								<p class="award-org">DRDO — Center for Artificial Intelligence and Robotics, Bangalore</p>
 								<p class="award-desc">
-									Implemented the Snowball Relation Extraction model during my NLP internship at DRDO CAIR, 
-									achieving 87% accuracy and a peak F1 score of 75% on 10,000+ text records — 
-									improving model accuracy by 20% through 10-fold cross-validation and iterative fine-tuning.
+									Implemented the Snowball Relation Extraction model achieving 87% accuracy 
+									and a peak F1 score of 75% on 10,000+ text records — improved model 
+									accuracy by 20% through 10-fold cross-validation and iterative fine-tuning.
 								</p>
 							</div>
 						</li>
 
-						<!-- Award 4 -->
+						<!-- ── AWARD 4 ── -->
 						<li>
 							<span class="award-icon silver">🚀</span>
 							<div class="award-body">
@@ -389,31 +402,33 @@
 								</div>
 								<p class="award-org">Missouri University of Science and Technology — Course Project</p>
 								<p class="award-desc">
-									Built a Python-based drowsiness detection system using facial landmark algorithms 
-									(EAR, MAR) with OpenCV and Dlib, achieving 95% detection accuracy in real-time 
-									on Raspberry Pi hardware at 24fps.
+									Built a Python-based drowsiness detection system using facial landmark 
+									algorithms (EAR, MAR) with OpenCV and Dlib, achieving 95% detection 
+									accuracy in real-time on Raspberry Pi hardware at 24fps.
 								</p>
 								<a href="https://drive.google.com/file/d/1llEZc2mmFgfh4mxYAe2XcPtcodaSnUVa/view?usp=sharing" class="award-link" target="_blank">View Project →</a>
 							</div>
 						</li>
 
-						<!-- ── ADD A NEW AWARD — copy this block ──
+						<!-- ════════════════════════════════════════════════
+						     ADD NEW AWARDS HERE — paste a copy of this block:
+
 						<li>
 							<span class="award-icon gold">🏅</span>
 							<div class="award-body">
 								<div class="award-meta">
-									<p class="award-title">Your Award Title Here</p>
-									<span class="award-year-tag">YYYY</span>
+									<p class="award-title">Your Award Title</p>
+									<span class="award-year-tag">Month YYYY</span>
 								</div>
 								<p class="award-org">Awarding Organization</p>
 								<p class="award-desc">
-									Describe the award, what it recognizes, and why you received it. 
-									2-3 sentences is ideal.
+									2-3 sentences describing the award and why you received it.
 								</p>
-								<a href="#" class="award-link" target="_blank">Learn More →</a>
+								<a href="YOUR_LINK" class="award-link" target="_blank">Learn More →</a>
 							</div>
 						</li>
-						────────────────────────────────── -->
+
+						     ════════════════════════════════════════════════ -->
 
 					</ul>
 				</section>
