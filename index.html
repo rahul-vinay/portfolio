@@ -12,15 +12,20 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script>
-            if (sessionStorage.getItem('visited')) {
-                document.documentElement.classList.add('no-intro');
-            } else {
-                sessionStorage.setItem('visited', 'true');
-            }
-        </script>
-        <style>
-            .no-intro #intro { display: none !important; }
-        </style>
+    if (sessionStorage.getItem('visited')) {
+        document.documentElement.classList.add('no-preload');
+    } else {
+        sessionStorage.setItem('visited', 'true');
+    }
+</script>
+<style>
+    .no-preload.is-preload *, 
+    .no-preload.is-preload *:before, 
+    .no-preload.is-preload *:after {
+        animation: none !important;
+        transition: none !important;
+    }
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -236,6 +241,7 @@
 
 	</body>
 </html>
+
 
 
 
